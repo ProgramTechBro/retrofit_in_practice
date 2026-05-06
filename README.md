@@ -58,47 +58,53 @@ lib/
 │   ├── di/
 │   │   └── injection.dart                  ← GetIt DI registration
 │   ├── errors/
-│   │   └── failures.dart                   ← Failure types
-│   └── network/
-│       ├── dio_client.dart                 ← Dio configuration
+│   │   ├── failures.dart                   ← Domain failures (Server, Network)
+│   │   └── error_handler.dart              ← Exception mapping & Developer logging
+│   └── networks/
 │       ├── api_service.dart                ← Retrofit interface (@GET, @POST, @DELETE)
 │       └── api_service.g.dart              ← Generated Retrofit implementation
 │
 └── features/
-    └── product/
+    └── products/
         ├── data/
-        │   ├── models/
-        │   │   ├── product_model.dart       ← JSON model + toEntity() mapper
-        │   │   └── product_model.g.dart     ← Generated JSON serialization
         │   ├── datasources/
         │   │   └── product_remote_datasource.dart
+        │   ├── mappers/
+        │   │   └── product_mapper.dart       ← Model ↔ Entity mappers
+        │   ├── models/
+        │   │   ├── product_request_model.dart
+        │   │   ├── product_response_model.dart
+        │   │   └── rating_model.dart
         │   └── repositories/
         │       └── product_repository_impl.dart
         │
         ├── domain/
         │   ├── entities/
         │   │   └── product.dart             ← Pure Dart entity (Equatable)
+        │   ├── params/
+        │   │   └── add_product_params.dart  ← Use Case parameters
         │   ├── repositories/
         │   │   └── product_repository.dart  ← Abstract contract
         │   └── usecases/
-        │       ├── get_products.dart
+        │       ├── get_product.dart
         │       ├── add_product.dart
         │       └── delete_product.dart
         │
         └── presentation/
             ├── pages/
-            │   └── product_page.dart        ← Main page (orchestrator only)
-            ├── state/
-            │   ├── product_cubit.dart
-            │   └── product_state.dart
-            └── local_widgets/
-                ├── product_app_bar.dart
-                ├── product_search_bar.dart
-                ├── product_grid.dart
-                ├── product_card.dart
-                ├── product_shimmer_grid.dart
-                ├── product_error_view.dart
-                └── add_product_sheet.dart
+            │   ├── product_page.dart        ← Screens
+            │   └── local_widgets/           ← UI Components
+            │       ├── add_product_sheet.dart
+            │       ├── product_app_bar.dart
+            │       ├── product_card.dart
+            │       ├── product_error_view.dart
+            │       ├── product_grid.dart
+            │       ├── product_search_bar.dart
+            │       └── product_shimmer_grid.dart
+            └── state/
+                ├── product_cubit.dart
+                └── product_state.dart
+
 ```
 
 ---
