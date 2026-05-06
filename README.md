@@ -1,10 +1,10 @@
-# 🛍️ Retrofit Store — Flutter Clean Architecture
+# ShopFlow — Flutter Clean Architecture
 
 A production-ready Flutter app built with **FakeStoreAPI**, **Retrofit**, **Dio**, **Cubit**, and **Clean Architecture** — structured the way real companies build scalable mobile apps.
 
 ---
 
-## 🚀 Features
+## Features
 
 - ✅ Clean Architecture (Data / Domain / Presentation)
 - ✅ Retrofit for type-safe, annotation-driven API calls
@@ -21,7 +21,7 @@ A production-ready Flutter app built with **FakeStoreAPI**, **Retrofit**, **Dio*
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -36,7 +36,7 @@ A production-ready Flutter app built with **FakeStoreAPI**, **Retrofit**, **Dio*
 
 ---
 
-## 🌐 API
+## API
 
 **Base URL:** `https://fakestoreapi.com`
 
@@ -48,7 +48,7 @@ A production-ready Flutter app built with **FakeStoreAPI**, **Retrofit**, **Dio*
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 lib/
@@ -136,7 +136,7 @@ flutter run
 
 ---
 
-## 🔥 Retrofit in Action
+##  Retrofit in Action
 
 ```dart
 @RestApi(baseUrl: 'https://fakestoreapi.com')
@@ -158,7 +158,7 @@ No manual URL building. No manual JSON parsing. No repetitive boilerplate — Re
 
 ---
 
-## 🧠 Architecture Flow
+## Architecture Flow
 
 ```
 UI (Cubit/State)
@@ -176,7 +176,7 @@ Each layer only knows about the layer directly below it. The domain layer has **
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ```yaml
 dependencies:
@@ -199,7 +199,7 @@ dev_dependencies:
 
 ---
 
-## 🎯 What You'll Learn From This Project
+## What You'll Learn From This Project
 
 - How Clean Architecture is applied in a real Flutter app
 - How Retrofit eliminates boilerplate API code with annotations
@@ -210,18 +210,18 @@ dev_dependencies:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Built as part of a daily Flutter learning series focused on production-level architecture, clean code, and real-world patterns.
 
 ---
 
-## ⭐ Support
+## Support
 
 If this helped you, give it a star on GitHub ⭐
 
 ---
 
-## 🏷️ Tags
+##  Tags
 
 `Flutter` `Dart` `Clean Architecture` `Retrofit` `Dio` `Cubit` `flutter_bloc` `GetIt` `FakeStoreAPI` `Mobile Development` `100DaysOfFlutter`
