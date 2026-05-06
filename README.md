@@ -163,13 +163,16 @@ No manual URL building. No manual JSON parsing. No repetitive boilerplate — Re
 ```
 UI (Cubit/State)
      ↓
-  Use Cases          ← Domain layer — pure business logic
+  Use Cases (Params) ← [Params] encapsulate input data for business logic
      ↓
-  Repository         ← Abstract contract defined in domain
+  Repository         ← Abstract contract (Interface)
      ↓
-  Datasource         ← Data layer — calls Retrofit API
+  Repository Impl    ← Uses [Mappers] to bridge Data and Domain
      ↓
-  Retrofit + Dio     ← HTTP layer — handles all networking
+  Datasource         ← Fetches raw data from external sources
+     ↓
+  Retrofit + Dio     ← Handles HTTP requests and JSON parsing
+
 ```
 
 Each layer only knows about the layer directly below it. The domain layer has **zero** Flutter or Retrofit dependencies.
